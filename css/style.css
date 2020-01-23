@@ -73,10 +73,15 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* barra della chat corrente */
 .current_chat {
   height: 60px;
   background-color: lightgreen;
 }
+
+
+/* finestra della conversazione */
 .conversation {
   height: calc(100% - 120px);
   background-image: url(../img/wp_132.jpg);
@@ -84,6 +89,9 @@ body {
   background-size: cover;
   overflow: auto;
 }
+
+
+/* barra invio messaggi */
 .send_message {
   height: 60px;
   background-color: orange;
