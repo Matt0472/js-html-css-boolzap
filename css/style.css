@@ -23,7 +23,7 @@ body {
 }
 .chat_wrapper {
   width: 85%;
-  height: 670px;
+  height: 680px;
   background-color: blue;
   margin: 0 auto;
 }
@@ -37,23 +37,25 @@ body {
   width: 30%;
   height: 100%;
   background-color: green;
+  display: flex;
+  flex-direction: column;
 }
 .my_profile {
-  height: 60px;
+  height: 20px;
   border: 2px solid black;
 }
 .notification {
-  height: 65px;
+  height: 20px;
   border: 2px solid white;
 }
 
 .search_chat {
-  height: 35px;
+  height: 20px;
   border: 2px solid yellow;
 }
 
 .chat_list {
-  min-height: 150px;
+  height: 20px;
   border: 2px solid grey;
   overflow-y: scroll;
 }
@@ -62,7 +64,10 @@ body {
   width: 100%;
   border: 1px solid lightblue;
 }
-
+.acaso {
+  height: 20px;
+  background-color: blue;
+}
 /* main content right */
 .main_content_right {
   width: 70%;
@@ -70,7 +75,6 @@ body {
   background-color: purple;
   display: flex;
   flex-direction: column;
-
 }
 .current_chat {
   height: 60px;
@@ -79,6 +83,7 @@ body {
 .conversation {
   height: calc(100% - 120px);
   background-color: lightgrey;
+  overflow: auto;
 }
 .send_message {
   height: 60px;
