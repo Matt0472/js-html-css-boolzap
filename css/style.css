@@ -18,4 +18,13 @@ body {
   height: 100vh;
   width: 100%;
   background-color: yellow;
+  position: relative;
+}
+.chat_wrapper {
+  height: 600px;
+  width: 80%;
+  background-color: blue;
+  position: absolute;
+  top: -50px;
+  left: 150px;
 }
