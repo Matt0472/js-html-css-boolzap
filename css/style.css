@@ -37,6 +37,27 @@ body {
   justify-content: center;
   align-items: center;
 }
+.template {
+  display: none;
+}
+.message {
+  width: 170px;
+  background-color: #DCF8C6;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 25px;
+  word-wrap: break-word;
+  position: relative;
+  color: #393939;
+}
+.message span {
+  position: absolute;
+  right: 9px;
+  bottom: 0;
+  font-size: 8px;
+  color: #9FB48F;
+}
 /* main content left */
 .main_content_left {
   width: 30%;
@@ -184,6 +205,7 @@ body {
   background-position: center;
   background-size: cover;
   overflow: auto;
+  padding: 0 60px;
 }
 
 
