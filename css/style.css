@@ -79,10 +79,38 @@ body {
 }
 .conversation {
   height: calc(100% - 120px);
-  background-color: lightgrey;
+  background-image: url(../img/wp_132.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: auto;
 }
 .send_message {
   height: 60px;
   background-color: orange;
+  display: flex;
+  justify-content: space-between;
+}
+.smile_icon,
+.send_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8%;
+}
+.smile_icon,
+.send_icon i {
+  font-size: 23px;
+}
+.text_message {
+  width: 84%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text_message input {
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
 }
