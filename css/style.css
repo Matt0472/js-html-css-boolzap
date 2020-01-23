@@ -31,7 +31,11 @@ body {
 .list_style {
   list-style: none;
 }
-
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* main content left */
 .main_content_left {
   width: 30%;
@@ -77,15 +81,50 @@ body {
 /* barra della chat corrente */
 .current_chat {
   height: 60px;
-  background-color: lightgreen;
+  background-color: #EDEDED;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
-
-
+.current_chat_avatar {
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+.current_chat_avatar img {
+  width: 40px;
+  border-radius: 50px;
+}
+.current_chat_name {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.current_chat_name h3 {
+  color: #2B2B2B;
+  font-weight: lighter;
+}
+.current_chat_name p {
+  color: #A6AAAD;
+}
+.current_chat_icons {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.current_chat_icons i {
+  font-size: 20px;
+  margin-right: 20px;
+  color: #A6AAAD;
+}
 /* finestra della conversazione */
 .conversation {
   height: calc(100% - 120px);
-  background-image: url(../img/wp_132.jpg);
+  background-image: url(../img/mine.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   overflow: auto;
 }
@@ -94,26 +133,21 @@ body {
 /* barra invio messaggi */
 .send_message {
   height: 60px;
-  background-color: orange;
+  background-color: #EDEDED;
   display: flex;
   justify-content: space-between;
 }
 .smile_icon,
 .send_icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 8%;
 }
 .smile_icon,
 .send_icon i {
   font-size: 23px;
+  color: #A6AAAD;
 }
 .text_message {
   width: 84%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .text_message input {
