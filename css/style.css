@@ -22,8 +22,8 @@ body {
 
 }
 .chat_wrapper {
-  width: 80%;
-  height: 600px;
+  width: 85%;
+  height: 670px;
   background-color: blue;
   margin: 0 auto;
 }
@@ -70,7 +70,7 @@ body {
   background-color: purple;
   display: flex;
   flex-direction: column;
-  
+
 }
 .current_chat {
   height: 60px;
