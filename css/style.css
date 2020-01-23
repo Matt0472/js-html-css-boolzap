@@ -22,3 +22,31 @@ body {
   background-color: blue;
   margin: 0 auto;
 }
+
+.list_style {
+  list-style: none;
+}
+
+/* find chat */
+.main_content_right {
+  width: 30%;
+  height: 100%;
+  background-color: green;
+}
+.my_profile {
+  height: 60px;
+  border: 2px solid black;
+}
+.notification {
+  height: 65px;
+  border: 2px solid white;
+}
+.search_chat {
+  height: 35px;
+  border: 2px solid yellow;
+}
+.chat_list {
+  height: 520px;
+  border: 2px solid grey;
+  overflow-y: scroll;
+}
