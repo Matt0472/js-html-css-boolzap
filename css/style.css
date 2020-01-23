@@ -41,33 +41,30 @@ body {
   flex-direction: column;
 }
 .my_profile {
-  height: 20px;
   border: 2px solid black;
+  flex-basis: calc((100% / 10));
 }
 .notification {
-  height: 20px;
   border: 2px solid white;
+  flex-basis: calc((100% / 10));
 }
 
 .search_chat {
-  height: 20px;
   border: 2px solid yellow;
+  flex-basis: calc((100% / 10));
 }
 
 .chat_list {
-  height: 20px;
   border: 2px solid grey;
   overflow-y: scroll;
+  flex-basis: 100%;
+  padding: 5px;
 }
 .chat_list_item {
-  height: 60px;
   width: 100%;
   border: 1px solid lightblue;
 }
-.acaso {
-  height: 20px;
-  background-color: blue;
-}
+
 /* main content right */
 .main_content_right {
   width: 70%;
