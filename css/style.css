@@ -9,22 +9,16 @@ body {
   font-size: 14px;
 }
 
-#page_background_top {
-  height: 90px;
-  width: 100%;
-  background-color: purple;
-}
-#page_background_bottom {
+#page_background {
   height: 100vh;
   width: 100%;
-  background-color: yellow;
-  position: relative;
+  background: linear-gradient(180deg, rgba(0,159,105,1) 20%, rgba(0,159,105,1) 20%, rgba(224,224,224,1) 20%);
+  padding-top: 20px;
+
 }
 .chat_wrapper {
-  height: 600px;
+  height: 680px;
   width: 80%;
   background-color: blue;
-  position: absolute;
-  top: -50px;
-  left: 150px;
+  margin: 0 auto;
 }
