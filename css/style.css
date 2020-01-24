@@ -223,10 +223,15 @@ body {
 .send_icon {
   width: 8%;
 }
-.smile_icon,
+.smile_icon i,
 .send_icon i {
   font-size: 23px;
   color: #A6AAAD;
+  transition: 1s;
+}
+.smile_icon i:hover,
+.send_icon i:hover {
+  transform: scale(1.3);
 }
 .text_message {
   width: 84%;

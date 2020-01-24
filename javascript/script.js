@@ -17,15 +17,15 @@ $(document).ready(function() {
       $('.my_message').append(elementNew);
       $('#add-message').val(' ');
     });
-    $(document).on('click', '#add-message',
-    function() {
-      $('span.template').removeClass('template');
-      $('.microphone').addClass('template');
-    });
-    $(document).on('click', '.conversation',
-    function() {
-      $('span.airplane').addClass('template');
-      $('.microphone').removeClass('template');
-    });
+      $(document).on('click', '#add-message',
+      function() {
+        $('span.template').removeClass('template');
+        $('.microphone').addClass('template');
+      });
+        $(document).on('click', '.conversation',
+        function() {
+          $('span.airplane').addClass('template');
+          $('.microphone').removeClass('template');
+        });
   }
 );
