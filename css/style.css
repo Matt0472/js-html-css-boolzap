@@ -40,6 +40,9 @@ body {
 .template {
   display: none;
 }
+.display_none {
+  display: none;
+}
 .message {
   width: 170px;
   background-color: #DCF8C6;

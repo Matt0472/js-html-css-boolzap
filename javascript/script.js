@@ -10,11 +10,22 @@ $(document).ready(function() {
         }
       }
     );
-    $(document).on('click', '.send_icon i', function() {
+    $(document).on('click', '.send_icon i.fa-paper-plane', function() {
       var text = $('#add-message').val();
       var elementNew = $('.template li').clone();
       elementNew.append(text);
       $('.my_message').append(elementNew);
       $('#add-message').val(' ');
-    })
-});
+    });
+    $(document).on('click', '#add-message',
+    function() {
+      $('span.template').removeClass('template');
+      $('.microphone').addClass('template');
+    });
+    $(document).on('click', '.conversation',
+    function() {
+      $('span.airplane').addClass('template');
+      $('.microphone').removeClass('template');
+    });
+  }
+);
