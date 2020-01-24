@@ -198,11 +198,10 @@ body {
   display: block;
 }
 .message {
-  min-width: 20%;
+  min-width: 25%;
   max-width: 50%;
   padding: 5px;
   margin: 10px;
-
   border-radius: 5px;
 }
 .message-top {
