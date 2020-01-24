@@ -3,13 +3,11 @@ $(document).ready(function() {
       function (event) {
         if(event.which == 13 || event.keyCode == 13) {
           sendMessage();
-          setTimeout(receivedMessage, 3000);
         }
       }
     );
     $(document).on('click', '.send_icon', function() {
       sendMessage();
-      setTimeout(receivedMessage, 3000);
     });
       $(document).on('click', '#add-message',
       function() {
@@ -44,6 +42,7 @@ function sendMessage() {
     $('.conversation').append(newMessage);
 
     $('#add-message').val('');
+    setTimeout(receivedMessage, 3000);
   }
 }
 function receivedMessage() {
