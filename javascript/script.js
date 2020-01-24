@@ -19,13 +19,13 @@ $(document).ready(function() {
     });
       $(document).on('click', '#add-message',
       function() {
-        $('span.template').removeClass('template');
-        $('.microphone').addClass('template');
+        $('span.display_none').removeClass('display_none');
+        $('.microphone').addClass('display_none');
       });
         $(document).on('click', '.conversation',
         function() {
-          $('span.airplane').addClass('template');
-          $('.microphone').removeClass('template');
+          $('span.airplane').addClass('display_none');
+          $('.microphone').removeClass('display_none');
         });
   }
 );

@@ -217,30 +217,54 @@
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </section>
-        <section class="conversation clearfix">
-          <ul class="float-right list_style my_message">
-
-          </ul>
+        <section class="conversation active">
+          <div class="message sent">
+            <div class="message-top">
+              <p class="message-text">Ciao come stai?</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">10:40</small>
+            </div>
+          </div>
+          <div class="message received">
+            <div class="message-top">
+              <p class="message-text">Ciao come stai?</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">10:40</small>
+            </div>
+          </div>
         </section>
-        <section class="send_message">
+
+        <footer class="send_message">
           <div class="smile_icon flex_center">
             <i class="far fa-smile"></i>
           </div>
           <div class="text_message flex_center">
             <input id="add-message" type="text" name="" value="" placeholder="Scrivi un messaggio">
-            <div class="template" id="template-li">
-              <li class="message">
-                <span>22:35</span>
-              </li>
-            </div>
           </div>
           <div class="send_icon flex_center">
             <span class="microphone"><i class="fas fa-microphone"></i></span>
-            <span class="airplane template"><i class="fas fa-paper-plane"></i></span>
+            <span class="airplane display_none"><i class="fas fa-paper-plane"></i></span>
           </div>
-        </section>
+        </footer>
       </div>
     </div>
+
+
+    <div class="template">
+    <div class="message">
+      <div class="message-top">
+        <p class="message-text"></p>
+        <i class="fa fa-chevron-down f-right message-options"></i>
+      </div>
+      <div class="message-bottom">
+        <small class="message-time"></small>
+      </div>
+    </div>
+  </div>
 
   <script src="javascript/script.js" charset="utf-8"></script>
 </body>
