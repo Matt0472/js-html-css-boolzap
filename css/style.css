@@ -46,7 +46,9 @@ body {
 .template {
   display: none;
 }
-
+.active {
+  display: block;
+}
 /* main content left */
 .main_content_left {
   width: 30%;

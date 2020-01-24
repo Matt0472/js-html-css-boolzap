@@ -9,16 +9,19 @@ $(document).ready(function() {
     $(document).on('click', '.send_icon', function() {
       sendMessage();
     });
-      $(document).on('click', '#add-message',
-      function() {
-        $('span.display_none').removeClass('display_none');
-        $('.microphone').addClass('display_none');
-      });
-        $(document).on('click', '.conversation',
-        function() {
-          $('span.airplane').addClass('display_none');
-          $('.microphone').removeClass('display_none');
-        });
+    $(document).on('click', '#add-message',
+    function() {
+      $('span.display_none').removeClass('display_none');
+      $('.microphone').addClass('display_none');
+    });
+    $(document).on('click', '.conversation',
+    function() {
+      $('span.airplane').addClass('display_none');
+      $('.microphone').removeClass('display_none');
+    });
+    $(document).on('click', '.search_chat_wrapper i', function() {
+      search();
+    });
   }
 );
 
@@ -69,4 +72,16 @@ function addZero(number) {
     number = '0' + number;
   }
   return number;
+}
+
+function search() {
+  $('.item_wrapper').each(
+    function (chatName) {
+      var chatName = $('.current_chat_name h3').text();
+      var searchText = $('#chat-scorer').val();
+      if (!chatName.includes(searchText)) {
+        $(this).addClass('display_none');
+      }
+    }
+  );
 }
