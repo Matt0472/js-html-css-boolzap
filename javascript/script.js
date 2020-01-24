@@ -3,11 +3,13 @@ $(document).ready(function() {
       function (event) {
         if(event.which == 13 || event.keyCode == 13) {
           sendMessage();
+          setTimeout(receivedMessage, 3000);
         }
       }
     );
     $(document).on('click', '.send_icon', function() {
       sendMessage();
+      setTimeout(receivedMessage, 3000);
     });
       $(document).on('click', '#add-message',
       function() {
@@ -44,7 +46,25 @@ function sendMessage() {
     $('#add-message').val('');
   }
 }
+function receivedMessage() {
+  var textMessage = 'Ciao Bello!';
+  var newMessage = $('.template .message').clone();
+  newMessage.find('.message-text').text(textMessage);
 
+  var data = new Date();
+  var hours = addZero(data.getHours());
+  var minutes = addZero(data.getMinutes());
+  var time = hours +':'+ minutes;
+
+  newMessage.find('.message-time').text(time);
+  newMessage.addClass('received');
+  $('.conversation').append(newMessage);
+
+  $('#add-message').val('');
+}
+
+
+// funzioni generiche
 function addZero(number) {
   if(number < 10) {
     number = '0' + number;
