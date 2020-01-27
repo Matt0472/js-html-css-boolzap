@@ -237,10 +237,10 @@ i {
 }
 .message-top i {
   position: relative;
-  opacity: 0;
+  /* opacity: 0; */
 }
 .message-top i:hover {
-  opacity: 1;
+  /* opacity: 1; */
   cursor: pointer;
 }
 .message-bottom {

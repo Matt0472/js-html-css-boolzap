@@ -39,15 +39,16 @@ $(document).ready(function() {
         $('.conversation').removeClass('active');
         pannelloConversazione.addClass('active');
       });
-      $('.message-top > i').click(function() {
-        var dropdown = $(this).children('.dropdown');
-        if (dropdown.hasClass('display_none')) {
-          dropdown.removeClass('display_none');
-          dropdown.addClass('active');
-        } else {
-          dropdown.addClass('display_none');
-          dropdown.removeClass('active');
-        }
+      $(document).on('click', '.message-top > i',
+        function() {
+          var dropdown = $(this).children('.dropdown');
+          if (dropdown.hasClass('display_none')) {
+            dropdown.removeClass('display_none');
+            dropdown.addClass('active');
+          } else {
+            dropdown.addClass('display_none');
+            dropdown.removeClass('active');
+          }
       });
   }
 );
