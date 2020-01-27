@@ -55,6 +55,7 @@ i {
 
 .dropdown {
   position: absolute;
+  text-align: center;
   top: 35px;
   right: 0;
   width: 110px;
@@ -64,7 +65,13 @@ i {
   border-radius: 2px;
 }
 .dropdown h5 {
+  line-height: 35px;
   font-size: 13px;
+  font-weight: normal;
+  color: #8b8b8b;
+}
+.dropdown h5:hover {
+  background-color: rgba(101, 101, 101, 0.1);
 }
 /* main content left */
 .main_content_left {
@@ -237,10 +244,8 @@ i {
 }
 .message-top i {
   position: relative;
-  /* opacity: 0; */
 }
 .message-top i:hover {
-  /* opacity: 1; */
   cursor: pointer;
 }
 .message-bottom {

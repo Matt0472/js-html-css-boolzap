@@ -50,6 +50,10 @@ $(document).ready(function() {
             dropdown.removeClass('active');
           }
       });
+      $(document).on('click', '.dropdown > h5.delete_message', function() {
+        var messaggio = $(this).parents('.message');
+        messaggio.addClass('display_none');
+      });
   }
 );
 
