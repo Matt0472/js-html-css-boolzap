@@ -56,6 +56,7 @@ $(document).ready(function() {
       });
   }
 );
+console.log($('.current_chat_name.head > h3').text());
 
 
 // funzione per l'invio dei messaggi dall'utente
