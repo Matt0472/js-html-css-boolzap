@@ -36,7 +36,7 @@ $(document).ready(function() {
 );
 
 
-
+// funzione per l'invio dei messaggi dall'utente
 function sendMessage() {
   var textMessage = $('#add-message').val();
 
@@ -53,11 +53,13 @@ function sendMessage() {
     newMessage.find('.message-time').text(time);
     newMessage.addClass('sent');
     $('.conversation').append(newMessage);
-
+    scrollMessage();
     $('#add-message').val('');
     setTimeout(receivedMessage, 3000);
   }
 }
+
+// funzione che manda i messaggi di risposta
 function receivedMessage() {
   var textMessage = 'Ciao Bello!';
   var newMessage = $('.template .message').clone();
@@ -73,13 +75,20 @@ function receivedMessage() {
   $('.conversation').append(newMessage);
 
   $('#add-message').val('');
+  scrollMessage();
 }
 
 
-// funzioni generiche
+// funzione che crea lo zero nel tempo
 function addZero(number) {
   if(number < 10) {
     number = '0' + number;
   }
   return number;
+}
+
+// funzione che scrolla i messaggi
+function scrollMessage() {
+    var heightContainer = $('.conversation.active').height();
+    $('.conversation.active').scrollTop(heightContainer);
 }
