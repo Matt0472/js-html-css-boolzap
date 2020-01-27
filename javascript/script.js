@@ -19,8 +19,18 @@ $(document).ready(function() {
       $('span.airplane').addClass('display_none');
       $('.microphone').removeClass('display_none');
     });
-    $(document).on('click', '.search_chat_wrapper i', function() {
-      search();
+
+    $('.search_chat_wrapper input').keyup(function () {
+      var text = $('.search_chat_wrapper input').val().toLowerCase();
+
+      $('.item_wrapper').each(function () {
+        var contactName = $(this).find('.contact_name').text().toLowerCase();
+        if(contactName.includes(text) == true) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
     });
   }
 );
@@ -72,16 +82,4 @@ function addZero(number) {
     number = '0' + number;
   }
   return number;
-}
-
-function search() {
-  $('.item_wrapper').each(
-    function (chatName) {
-      var chatName = $('.current_chat_name h3').text();
-      var searchText = $('#chat-scorer').val();
-      if (!chatName.includes(searchText)) {
-        $(this).addClass('display_none');
-      }
-    }
-  );
 }
