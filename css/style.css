@@ -188,6 +188,7 @@ body {
 }
 /* finestra della conversazione */
 .conversation {
+  display: none;
   height: calc(100% - 120px);
   background-image: url(../img/mine.jpg);
   background-repeat: no-repeat;

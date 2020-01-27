@@ -32,6 +32,13 @@ $(document).ready(function() {
         }
       });
     });
+      $('.item_wrapper').click(
+      function() {
+        var conversazione = $(this).attr('data-contact');
+        var pannelloConversazione = $('.conversation[data-contact="' + conversazione + '"]');
+        $('.conversation').removeClass('active');
+        pannelloConversazione.addClass('active');
+      });
   }
 );
 
