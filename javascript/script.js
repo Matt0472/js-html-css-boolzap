@@ -75,7 +75,7 @@ function sendMessage() {
 
     newMessage.find('.message-time').text(time);
     newMessage.addClass('sent');
-    $('.conversation').append(newMessage);
+    $('.conversation.active').append(newMessage);
     scrollMessage();
     $('#add-message').val('');
     setTimeout(receivedMessage, 3000);
@@ -95,7 +95,7 @@ function receivedMessage() {
 
   newMessage.find('.message-time').text(time);
   newMessage.addClass('received');
-  $('.conversation').append(newMessage);
+  $('.conversation.active').append(newMessage);
 
   $('#add-message').val('');
   scrollMessage();
