@@ -58,8 +58,7 @@ i {
   text-align: center;
   top: 35px;
   right: 0;
-  width: 110px;
-  height: 70px;
+  width: 130px;
   filter: drop-shadow(0 0 0.50rem grey);
   background-color: #fff;
   border-radius: 2px;
@@ -232,6 +231,7 @@ i {
   display: block;
 }
 .message {
+  position: relative;
   min-width: 25%;
   max-width: 50%;
   padding: 5px;
@@ -243,9 +243,10 @@ i {
   justify-content: space-between;
 }
 .message-top i {
-  position: relative;
+  opacity: 0;
 }
 .message-top i:hover {
+  opacity: 1;
   cursor: pointer;
 }
 .message-bottom {

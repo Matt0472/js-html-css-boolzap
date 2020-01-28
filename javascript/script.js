@@ -50,13 +50,17 @@ $(document).ready(function() {
             dropdown.removeClass('active');
           }
       });
-      $(document).on('click', '.dropdown > h5.delete_message', function() {
-        var messaggio = $(this).parents('.message');
-        messaggio.addClass('display_none');
+      // $(document).on('click', '.dropdown > h5.delete_message', function() {
+      //   var messaggio = $(this).parents('.message');
+      //   messaggio.addClass('display_none');
+      // });
+      $(document).on('click', '.message-options', function() {
+      $(this).parent().siblings('.dropdown').toggleClass('active');
+      $(this).parents('.message').siblings('.message').find('.dropdown').removeClass('active');
       });
-  }
-);
-console.log($('.current_chat_name.head > h3').text());
+  });
+
+
 
 
 // funzione per l'invio dei messaggi dall'utente
