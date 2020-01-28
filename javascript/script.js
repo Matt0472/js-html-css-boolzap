@@ -28,13 +28,21 @@ $(document).ready(function() {
         });
       });
 
-      // cambio del pannello della conversazione
-      $('.item_wrapper').click(
-      function() {
+      // cambio del pannello della conversazione e dati di quest'ultima
+      $(document).on('click','.item_wrapper', function() {
         var conversazione = $(this).attr('data-contact');
         var pannelloConversazione = $('.conversation[data-contact="' + conversazione + '"]');
         $('.conversation').removeClass('active');
         pannelloConversazione.addClass('active');
+        $('.item_wrapper').removeClass('on_active');
+        $(this).addClass('on_active');
+
+        var name = $(this).find('.contact_name').text();
+        var time = $(this).find('.last_message_time > p').text();
+        var img = $(this).find('.chat_list_avatar img').attr('src');
+        $('.main_content_right .current_chat .current_chat_name .head_name').text(name);
+        $('.main_content_right .current_chat .current_chat_name .head_time').text('Ultimo accesso oggi alle' + ' ' + time);
+        $('.main_content_right .current_chat .current_chat_avatar img').attr('src', img);
       });
 
       // attivazione del dropdown
@@ -58,7 +66,7 @@ $(document).ready(function() {
 
 
 
-
+// --------------------FUNZIONI GENERICHE---------------------------------
 // funzione per l'invio dei messaggi dall'utente
 function sendMessage() {
   var textMessage = $('#add-message').val();

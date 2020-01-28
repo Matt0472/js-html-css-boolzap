@@ -49,6 +49,9 @@ body {
 .active {
   display: block;
 }
+.on_active {
+  background-color: rgba(191, 191, 191, 0.5);
+}
 i {
   cursor: pointer;
 }
