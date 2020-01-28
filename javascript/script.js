@@ -9,15 +9,10 @@ $(document).ready(function() {
     $(document).on('click', '.send_icon', function() {
       sendMessage();
     });
-    $(document).on('click', '#add-message',
-    function() {
-      $('span.display_none').removeClass('display_none');
-      $('.microphone').addClass('display_none');
-    });
-    $(document).on('click', '.conversation',
-    function() {
-      $('span.airplane').addClass('display_none');
-      $('.microphone').removeClass('display_none');
+    $('#add-message').focus(function(){
+      $('.send_icon > i').removeClass('fas fa-microphone').addClass('fas fa-paper-plane');
+        }).blur(function(){
+          $('.send_icon > i').removeClass('fas fa-paper-plane').addClass('fas fa-microphone');
     });
 
     $('.search_chat_wrapper input').keyup(function () {
@@ -50,10 +45,6 @@ $(document).ready(function() {
             dropdown.removeClass('active');
           }
       });
-      // $(document).on('click', '.dropdown > h5.delete_message', function() {
-      //   var messaggio = $(this).parents('.message');
-      //   messaggio.addClass('display_none');
-      // });
       $(document).on('click', '.message-options', function() {
       $(this).parent().siblings('.dropdown').toggleClass('active');
       $(this).parents('.message').siblings('.message').find('.dropdown').removeClass('active');
