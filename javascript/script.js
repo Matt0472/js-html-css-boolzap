@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // invio del messaggio premendo il tasto invio
   $('#add-message').keypress(
       function (event) {
         if(event.which == 13 || event.keyCode == 13) {
@@ -7,29 +8,27 @@ $(document).ready(function() {
       }
     );
 
-    $(document).on('click', '.send_icon', function() {
-      sendMessage();
-    });
-
-    $('#add-message').focus(function(){
-      $('.send_icon > i').removeClass('fas fa-microphone').addClass('fas fa-paper-plane');
-        }).blur(function(){
-          $('.send_icon > i').removeClass('fas fa-paper-plane').addClass('fas fa-microphone');
-    });
-
-    $('.search_chat_wrapper input').keyup(function () {
-      var text = $('.search_chat_wrapper input').val().toLowerCase();
-
-      $('.item_wrapper').each(function () {
-        var contactName = $(this).find('.contact_name').text().toLowerCase();
-        if(contactName.includes(text) == true) {
-          $(this).show();
-        } else {
-          $(this).hide();
-        }
+      // invio e ricezione del messaggio on click sull'icona
+      $(document).on('click', '.send_icon', function() {
+        sendMessage();
       });
-    });
 
+
+      // ricerca nell'input delle chat
+      $('.search_chat_wrapper input').keyup(function () {
+        var text = $('.search_chat_wrapper input').val().toLowerCase();
+
+        $('.item_wrapper').each(function () {
+          var contactName = $(this).find('.contact_name').text().toLowerCase();
+          if(contactName.includes(text) == true) {
+            $(this).show();
+          } else {
+            $(this).hide();
+          }
+        });
+      });
+
+      // cambio del pannello della conversazione
       $('.item_wrapper').click(
       function() {
         var conversazione = $(this).attr('data-contact');
@@ -38,16 +37,23 @@ $(document).ready(function() {
         pannelloConversazione.addClass('active');
       });
 
-
+      // attivazione del dropdown
       $(document).on('click', '.message-options', function() {
       $(this).parent().siblings('.dropdown').toggleClass('active');
       $(this).parents('.message').siblings('.message').find('.dropdown').removeClass('active');
       });
 
+      // cancellazione del messaggio dal dropdown
       $(document).on('click', '.delete_message', function() {
         $(this).parents('.message').remove();
       });
 
+      // cambio dell'icona in basso di fianco alla barra invio Messaggio
+      $('#add-message').focus(function(){
+        $('.send_icon > i').removeClass('fas fa-microphone').addClass('fas fa-paper-plane');
+          }).blur(function(){
+            $('.send_icon > i').removeClass('fas fa-paper-plane').addClass('fas fa-microphone');
+      });
   });
 
 
