@@ -71,6 +71,7 @@ i {
 }
 .dropdown h5:hover {
   background-color: rgba(101, 101, 101, 0.1);
+  cursor: pointer;
 }
 /* main content left */
 .main_content_left {
